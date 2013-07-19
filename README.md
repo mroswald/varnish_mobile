@@ -3,9 +3,7 @@ varnish_mobile
 
 
 mobileDetect4varnish.class.php
-
 @author Mark Oswald <oswald@cbr.de>
-
 @version 0.1
 
 
