@@ -40,7 +40,7 @@
     if (!is_writable(dirname(__FILE__)))
         die('output dir ' . dirname(__FILE__) . ' is not writable');
 
-    define('LOGLINELENGHT', 30);
+    define('LOGLINELENGTH', 30);
 
     /**
      * Class mobileDetect4Varnish
@@ -105,7 +105,7 @@
         }
     }
 
-    function printlogln( $sStr, $iLength = LOGLINELENGHT )
+    function printlogln( $sStr, $iLength = LOGLINELENGTH )
     {
         $sOutput = "#";
         $sOutput .= str_repeat(" ", ($iLength - strlen($sStr) - 2) / 2);
@@ -115,13 +115,13 @@
         print $sOutput;
     }
 
-    print str_repeat("#", LOGLINELENGHT) . "\n";
+    print str_repeat("#", LOGLINELENGTH) . "\n";
     printlogln("");
     printlogln("");
     printlogln("Starting conversion");
     printlogln("");
     printlogln("");
-    print str_repeat("#", LOGLINELENGHT) . "\n";
+    print str_repeat("#", LOGLINELENGTH) . "\n";
 
     $oConvert = new mobileDetect4Varnish();
     $sVCL = $oConvert->convert4varnish();
